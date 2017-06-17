@@ -1,7 +1,6 @@
 var url = require('url');
     connect = require("connect"),
     mongodb = require("mongodb"),
-    api = require("./../lib/api"),
     MongoInstance = new(require("./../lib/mongoDBWrap"));
 
 
@@ -44,9 +43,6 @@ function simpleRouter(req, res, next) {
             for(var i = 0;i < Math.random() * 10; i++) {
                 myString += chars[Math.floor(Math.random() * chars.length)];
             }
-            console.log(myString);
-            console.log(maxAge);
-
             MongoInstance.insert({
                 data: myString,
                 ttl: maxAge

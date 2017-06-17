@@ -12,6 +12,10 @@
     "cloud",
     "rest"
   ],
+
+  "scripts": {
+    "start": "node src/main.js"
+  },
   "author": "maciej moczulski",
   "license": "MIT",
   "devDependencies": {},
